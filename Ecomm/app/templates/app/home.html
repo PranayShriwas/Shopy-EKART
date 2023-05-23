@@ -49,7 +49,7 @@
  <h2>ShoppingX Deals of The Day</h2>
  <!-- Slider 1 -->
  <div class="owl-carousel" id="slider1">
-  <a href="{% url 'product-detail' %}" class="btn"><div class="item"><img src="{% static 'app/images/product/1.jpg' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br><span class="fs-5">Rs. 500</span></div></a>
+  <a href="{% url 'product-detail' %}" class="btn"><div class="item"><img src="{% static 'app/images/product/1.jpg' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br><span class="fs-5">Rs. {{b.discounted_price}}</span></div></a>
   <div class="item"><img src="{% static 'app/images/product/2.jpg' %}" alt="" height="200px"><span class="fw-bold">Product 2</span><br><span class="fs-5">Rs. 300</span></div>
   <div class="item"><img src="{% static 'app/images/product/3.jpg' %}" alt="" height="200px"><span class="fw-bold">Product 3</span><br><span class="fs-5">Rs. 100</span></div>
   <div class="item"><img src="{% static 'app/images/product/4.jpg' %}" alt="" height="200px"><span class="fw-bold">Product 4</span><br><span class="fs-5">Rs. 700</span></div>
@@ -106,8 +106,8 @@
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider2">
   {%for B in bottomwears %}
-  <div class="item"><img src="{{B.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{B.title}}</span><br><span class="fs-5">{{B.discounted_price}}</span>
-  </div>
+  <a href="{% url 'product-detail' B.id %}" class="btn">
+  <div class="item"><img src="{{B.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{B.title}}</span><br><span class="fs-5">{{B.discounted_price}}</span></div></a>
   {% endfor %}
  </div>
 </div>
@@ -116,8 +116,9 @@
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
    {%for T in topwears %}
-   <div class="item"><img src="{{T.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{T.title}}</span><br><span class="fs-5">{{T.discounted_price}}</span>
-   </div>
+   <a href="{% url 'product-detail' T.id %}" class="btn">
+   <div class="item"><img src="{{T.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{T.title}}</span><br><span class="fs-5">{{T.discounted_price}}</span></div>
+  </a>
    {% endfor %}
   </div>
  </div>
@@ -126,8 +127,8 @@
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
    {%for L in laptops %}
-   <div class="item"><img src="{{L.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{L.title}}</span><br><span class="fs-5">{{L.discounted_price}}</span>
-   </div>
+   <a href="{% url 'product-detail' L.id %}" class="btn">
+   <div class="item"><img src="{{L.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{L.title}}</span><br><span class="fs-5">{{L.discounted_price}}</span> </div></a>
    {% endfor %}
   </div>
  </div>
@@ -137,8 +138,8 @@
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
    {%for M in mobiles%}
-   <div class="item"><img src="{{M.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{M.title}}</span><br><span class="fs-5">{{M.discounted_price}}</span>
-   </div>
+   <a href="{% url 'product-detail' M.id %}" class="btn">
+   <div class="item"><img src="{{M.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{M.title}}</span><br><span class="fs-5">{{M.discounted_price}}</span> </div></a>
    {% endfor %}
   </div>
  </div>

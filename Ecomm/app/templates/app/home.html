@@ -34,7 +34,7 @@
 {% block livesale %}
 <!-- Live Sale Section -->
 <div class="container">
-  <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
+  <div class="row bg-warning text-center p-5 text-black border-bottom shadow">
     <h1>SALE IS LIVE NOW</h1>
     <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
     <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
@@ -102,7 +102,7 @@
 
 <!-- 2nd Product Slider -->
 <div class="mx-3">
- <h2>Bottom Wear</h2>
+ <h2 align='center'>Bottom Wear</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider2">
   {%for B in bottomwears %}
@@ -111,6 +111,7 @@
   {% endfor %}
  </div>
 </div>
+<hr>
  <div class="mx-3">
   <h2>Top Wear</h2>
   <!-- Slider 2 -->
@@ -122,8 +123,9 @@
    {% endfor %}
   </div>
  </div>
+ <hr>
  <div class="mx-3">
-  <h2>Laptop </h2>
+  <h2 align='center'>Laptop </h2>
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
    {%for L in laptops %}
@@ -132,9 +134,9 @@
    {% endfor %}
   </div>
  </div>
-
+<hr>
  <div class="mx-3">
-  <h2>Mobiles</h2>
+  <h2 >Mobiles</h2>
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
    {%for M in mobiles%}

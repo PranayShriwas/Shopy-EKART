@@ -39,7 +39,7 @@
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
                <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
-               <li><a class="dropdown-item" href="#">Laptop</a></li>
+               <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
              </ul>
            </li>
            <li class="nav-item dropdown">
@@ -47,8 +47,8 @@
                Fashion
              </a>
              <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
-               <li><a class="dropdown-item" href="#">Top Wear</a></li>
-               <li><a class="dropdown-item" href="#">Bottom Wear</a></li>
+               <li><a class="dropdown-item" href="{% url 'topwear' %}"">Top Wear</a></li>
+               <li><a class="dropdown-item" href="{% url 'bottomwear' %}">Bottom Wear</a></li>
              </ul>
            </li>
          </ul>
@@ -70,8 +70,8 @@
               </ul>
             </li>
             <li class="nav-item mx-2">
-             <a href="{% url 'add-to-cart' %}" class="nav-link text-white"><span class="badge bg-danger">4</span> Cart </a>
-            </li>
+             <a href="{% url 'showcart' %}" class="nav-link text-white"><span class="badge bg-danger">4</span> Cart </a>
+            </li>   
             <li class="nav-item mx-2">
              <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
             </li>
